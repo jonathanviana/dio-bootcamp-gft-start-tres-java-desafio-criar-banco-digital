@@ -1,6 +1,6 @@
 package com.bancodigital.services;
 
-public abstract class Account implements AccountsInterface {
+public abstract class Account implements AccountInterface {
 
     private static final int DEFAULT_AGENCY = 42;
     private static int SEQUENTIAL = 1;
@@ -30,7 +30,7 @@ public abstract class Account implements AccountsInterface {
     }
 
     @Override
-    public void pix(double value, AccountsInterface destinationAccount) {
+    public void pix(double value, AccountInterface destinationAccount) {
         this.take(value);
         destinationAccount.put(value);
     }
