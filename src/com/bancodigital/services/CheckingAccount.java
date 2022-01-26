@@ -9,7 +9,7 @@ public class CheckingAccount extends Account{
     @Override
     public void extract() {
         System.out.println("##### - Extrato Conta Corrente - #####");
-        super.extractInfo();
+        super.extract();
     }
 
 }

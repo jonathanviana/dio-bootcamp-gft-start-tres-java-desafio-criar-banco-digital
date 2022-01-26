@@ -35,13 +35,8 @@ public abstract class Account implements AccountInterface {
         destinationAccount.put(value);
     }
 
-    protected void extractInfo() {
-        System.out.println();
-        System.out.println(String.format("Titular: %s", this.client.getName()));
-        System.out.println(String.format("Agência: %d", + this.agency));
-        System.out.println(String.format("Conta: %d", + this.accountNumber));
-        System.out.println(String.format("Saldo: %.2f", + this.balance));
-        System.out.println();
+    public void extract() {
+        System.out.printf("\nTitular: %s\nAgência: %d\nConta: %d\ndSaldo: R$ %,.2f\n\n", this.client.getName(), this.agency, this.accountNumber, this.balance);
     }
 }
 

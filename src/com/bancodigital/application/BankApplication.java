@@ -1,9 +1,6 @@
 package com.bancodigital.application;
 
-import com.bancodigital.services.Account;
-import com.bancodigital.services.Client;
-import com.bancodigital.services.CheckingAccount;
-import com.bancodigital.services.SavingAccount;
+import com.bancodigital.services.*;
 
 public class BankApplication {
     public static void main(String[] args) {
@@ -14,8 +11,8 @@ public class BankApplication {
         Client seller = new Client();
         seller.setName("Vendedor");
 
-        Account ca = new CheckingAccount(buyer);
-        Account sa = new SavingAccount(seller);
+        AccountInterface ca = new CheckingAccount(buyer);
+        AccountInterface sa = new SavingAccount(seller);
 
         ca.pix(100.00,sa);
         ca.take(200.00);
